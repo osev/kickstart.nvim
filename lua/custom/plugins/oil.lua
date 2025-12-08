@@ -3,6 +3,7 @@ return {
     'stevearc/oil.nvim',
     config = function()
       require('oil').setup()
+      vim.keymap.set('n', '<leader>e', '<cmd>Oil<CR>', { desc = 'Open file [E]xplorer (Oil)' })
     end,
     opts = {},
     -- Optional dependencies
