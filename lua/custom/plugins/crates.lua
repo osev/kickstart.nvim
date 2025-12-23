@@ -5,7 +5,7 @@ return {
     opts = {
       completion = {
         cmp = {
-          enabled = true,
+          enabled = false,
         },
       },
     },
