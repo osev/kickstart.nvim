@@ -1,4 +1,4 @@
--- Rust debugging with DAP and codelldb
+-- Rust/C/C++ debugging with DAP and codelldb
 return {
   'mfussenegger/nvim-dap',
   dependencies = {
@@ -72,5 +72,20 @@ return {
         stopOnEntry = false,
       },
     }
+
+    -- C/C++ configurations (reuse codelldb)
+    dap.configurations.c = {
+      {
+        name = 'Launch',
+        type = 'codelldb',
+        request = 'launch',
+        program = function()
+          return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
+        end,
+        cwd = '${workspaceFolder}',
+        stopOnEntry = false,
+      },
+    }
+    dap.configurations.cpp = dap.configurations.c
   end,
 }

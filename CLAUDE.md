@@ -72,4 +72,4 @@ Tmux navigation: `Ctrl+hjkl` works seamlessly between Neovim and tmux panes.
 
 ## Colorscheme
 
-tokyonight-night
+github_dark_high_contrast
